@@ -15,7 +15,7 @@ add_action('wp_enqueue_scripts', 'cn_css_styles');
 function cn_js_files() {
     wp_enqueue_script('functions', get_theme_file_uri('/js/functions.js'), true, 1.0, true);
     wp_enqueue_script('scroll_reveal', '//unpkg.com/scrollreveal/dist/scrollreveal.min.js', true, 2.0, true);
-    wp_enqueue_script('bootstrap', '//stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js', true, 3.1, true);
+    wp_enqueue_script('bootstrap', '//stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js', true, 3.4, true);
     wp_enqueue_script('jquery', get_theme_file_uri( '/js/jquery.js'), true, 1.0, true);
     wp_enqueue_script('mixitup', get_theme_file_uri('/js/vendor/jquery.mixitup.min.js'));
     wp_enqueue_script('jquery', get_theme_file_uri( '/js/jquery-2.1.1.js'), true, 2.1, true);

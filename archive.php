@@ -30,7 +30,7 @@ get_header(); ?>
 
       <div class="col-lg-8">
         <p><?php echo wp_trim_words(get_the_content(), 100); ?></p>
-      <p><a class="btn btn--blue" href="<?php echo the_permalink(); ?>">Read More</a></p>
+      <p><a class="btn btn-primary" href="<?php echo the_permalink(); ?>">Read More</a></p>
       </div>
   </div>
 <br>

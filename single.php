@@ -16,9 +16,42 @@ while(have_posts()) {
     
       <div class="generic-content">
       <?php the_content(); ?>
-      </div>
-        
+      </div>  
     </div>
+
+    <section id="itb-news">
+    <div class="container container--narrow page-section">
+    <hr>
+      <legend>Related Stories</legend>
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <ul class="cards">
+          <?php 
+          $relatedPosts = new WP_Query(array(
+            'posts_per_page' => 4,
+            'orderby' => 'rand',
+            'order' => 'ASC'
+          ));
+                while($relatedPosts->have_posts()) {
+                  $relatedPosts->the_post(); ?>
+                <li class="cards__item">
+              <div class="card">
+                <div class="card-image card-image-broward"></div>
+                <div class="card__content">
+                  <div class="card__title"><?php the_title(); ?></div>
+                  <p class="cardtext"><?php echo wp_trim_words(get_the_content(), 30); ?></p>
+                  <a href="<?php echo the_permalink(); ?>"><span class="readmore">Read More</span></a>
+                </div>
+              </div>
+            </li>
+
+                <?php  } wp_reset_postdata();
+                ?>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
 <?php }
 
