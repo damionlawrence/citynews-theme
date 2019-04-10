@@ -87,7 +87,7 @@
   <section id="top-story">
     <div class="container">
       <div class="row">
-        <div class="col-lg-6 col-md-8 col-xs-12 h-eatings">
+        <div class="col-lg-6 col-md-8 col-xs-12 top-story-capsule">
           <?php 
         $coverStory = new WP_Query(array(
           'posts_per_page' => 1,

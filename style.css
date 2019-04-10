@@ -79,6 +79,9 @@ hr.related:after {
     font-weight: 300;
     text-transform: uppercase;
 }
+legend {
+  background-color: #d91f26;
+}
 legend > a {
   color: #eee;
   }
@@ -323,7 +326,7 @@ span.btn:hover {
   display: inline-block;
 }
 #top-story {
-  background-image: url('./assets/cracker_2.jpg');
+  background-image: url('./assets/veteran.jpg');
   background-size: cover;
   background-position: center;
   /*background: #0B132B;*/
@@ -395,31 +398,8 @@ padding: 20px;
   text-align: center;
   border:0px;
 }
-#healthy-eatings {
-  background-image: url('./assets/13495_A.jpg');
-  background-size: cover;
-  background-position: center;
-  margin: 70px 0;
-  height: auto;
-  width: 100%;
-}
-#healthy-eatings legend{
-  font-family: 'Open Sans Condensed', sans-serif;
-  font-size: 1.2em;
-  background: #d71921;
-  color: #fff;
-  text-transform: uppercase;
-  width: 150px;
-  text-align: center;
-  border:0px;
-}
-#healthy-eatings h1{
-  color: #0B132B;
-  font-size: 2em;
-  text-transform: capitalize;
-  padding: 5px;
-}
-.h-eatings {
+
+.top-story-capsule {
   background: rgba(255, 255, 255, 0.9);
   padding: 50px;
   margin: 10px;

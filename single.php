@@ -22,7 +22,7 @@ while(have_posts()) {
     <section id="itb-news">
     <div class="container container--narrow page-section">
     <hr>
-      <legend>Related Stories</legend>
+      <legend>More Stories</legend>
       <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12">
           <ul class="cards">
