@@ -692,7 +692,7 @@ color: #fff;
   background: #0B132B;
   padding: 4px 10px;
   width: 75px;
-  color: #ffffff;
+  color: #ffffff !important;
   text-align: center;
 }
 .readmore:hover {

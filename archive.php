@@ -17,25 +17,16 @@ get_header(); ?>
   <?php
   while(have_posts()) {
     the_post(); ?>
-<div class="post-item">
-  <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-  <div>
-    <p>Written By <?php the_author_posts_link(); ?> on <?php the_time('n.j.y'); ?></p>
-  </div>
-  
-  <div class="posted-content">
+  <div class="post-item">
+    <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+    <p>Written By <?php the_author_posts_link(); ?> on <?php the_time('n.j.y'); ?></p><br>
 
-  <div class="row">
+    <div class="row">
       <div class="col-lg-4"><?php the_post_thumbnail(); ?></div>
-
-      <div class="col-lg-8">
-        <p><?php echo wp_trim_words(get_the_content(), 100); ?></p>
-      <p><a class="btn btn-primary" href="<?php echo the_permalink(); ?>">Read More</a></p>
-      </div>
+      <div class="col-lg-8"><p><?php echo wp_trim_words(get_the_content(), 100); ?></p><p><a class="readmore" href="<?php echo the_permalink(); ?>">Read More</a></p></div>
+      <br>
+    </div>
   </div>
-<br>
-</div>
-</div>
 
 
  <?php }
