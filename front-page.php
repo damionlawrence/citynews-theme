@@ -85,9 +85,9 @@
     </div>
   </section>
   <section id="top-story">
-    <div class="container-fluid">
+    <div class="container">
       <div class="row">
-        <div class="col-lg-4 col-md-8 col-xs-12 h-eatings">
+        <div class="col-lg-6 col-md-8 col-xs-12 h-eatings">
           <?php 
         $coverStory = new WP_Query(array(
           'posts_per_page' => 1,
@@ -140,30 +140,6 @@
                 <?php  } wp_reset_postdata();
                 ?>
           </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="healthy-eatings" class="home-newsletter">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-6">
-          <div class="h-eatings">
-            <legend>Heathy Eatings</legend>
-            <h1>Easy ALFRESCO Entertaining</h1>
-            <p>
-              FAMILY FEATURES Warmer weather is often welcome for a variety ofreasons, but there’s something nearly irresistibleabout enjoying a meal outdoors. Whether you plan to gather on the patio or pack a picnic for the park, dining al fresco is an easy way to
-              turn a meal into a full-fledged event.Begin your meal with chicken sandwiches crafted on the grilland a seasonal pasta salad on the side then finish it with a glass of white wine and a dessert made for al fresco entertaining –cheesecake
-              topped with fresh berries and mint. For more al fresco recipes and entertaining tips, visit Culinary.net.</p>
-            <p>
-              <strong>Pair Like a Pro</strong><br> When it comes to pairing wine with food, even experts agreethat desserts can pose a challenge. A wide variety of flavorcombinations can make it hard to find the perfect selection toserve with your sweet
-              treat. While there’s no exact science towine pairing, these simple tips can help you make yourselection. </p>
-            <p>
-              <strong>Sweet Cheesecake</strong>
-              <BR>A good rule: the lighter the dessert, the lighter the wine. Avoidheavy reds for a sweeter dessert and instead pair with a crispwhite like Chardonnay, such as Joseph Carr from Sonoma,California.
-            </p>
-            <span class="readmore">Download The Recipe</span>
-          </div>
         </div>
       </div>
     </div>

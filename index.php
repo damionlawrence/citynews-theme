@@ -22,7 +22,7 @@ get_header(); ?>
     <br>
     <div class="row">
       <div class="col-lg-4"><?php the_post_thumbnail(); ?></div>
-      <div class="col-lg-8"><p><?php echo wp_trim_words(get_the_content(), 100); ?></p><p><a class="readmore" href="<?php echo the_permalink(); ?>">Read More</a></p></div>
+      <div class="col-lg-8"><p><?php echo wp_trim_words(get_the_content(), 100); ?></p><br><p><a class="readmore" href="<?php echo the_permalink(); ?>">Read More</a></p></div>
     </div>
   </div>
 
