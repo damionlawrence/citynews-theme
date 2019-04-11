@@ -108,6 +108,10 @@ legend > a {
     border: 1px solid #ccc;
     padding: 20px;
   }
+  .textwrap {
+    float: right;
+    margin: 20px;
+  }
 #current-issue {
   background-image: url('./assets/blur.jpg');
   background-size: cover;
@@ -176,7 +180,7 @@ legend > a {
   font-size: 3em;
   text-transform: capitalize;
   text-align: center;
-  margin: 70px 0 40px 0;
+  margin: 20px 0 40px 0;
 }
 @media screen and ( max-width: 500px){
   .h1-article h1{
@@ -742,15 +746,14 @@ color: #fff;
   background-size: cover;
   overflow: hidden;
   position: relative;
-  /*border-top-left-radius: 0.2rem;
-  border-top-right-radius: 0.2rem;*/
-  /*-webkit-filter: contrast(70%);
-          filter: contrast(70%);*/
-
-  /*-webkit-transition: -webkit-filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
+  border-top-left-radius: 0.2rem;
+  border-top-right-radius: 0.2rem;
+  -webkit-filter: contrast(70%);
+          filter: contrast(70%);
+  -webkit-transition: -webkit-filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
   transition: -webkit-filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
   transition: filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
-  transition: filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91), -webkit-filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);*/
+  transition: filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91), -webkit-filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
 }
 .card-image::before {
   content: "";
@@ -786,6 +789,11 @@ color: #fff;
 }
 
 /* page banner and metabox */
+.featured-banner {
+  padding: 80px 0 40px 0;
+  position: relative;
+  height: 500px;
+}
 .page-banner {
   padding: 80px 0 40px 0;
   position: relative;

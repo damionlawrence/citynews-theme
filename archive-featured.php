@@ -20,7 +20,7 @@ get_header(); ?>
       <div class="col-lg-4"><?php the_post_thumbnail(); ?></div>
       <div class="col-lg-8">
       <h2><a href="<?php echo the_permalink(); ?>"><?php the_title(); ?></a></h2>
-    <p>Written By <?php the_author_posts_link(); ?> on <?php the_time('n.j.y'); ?></p><br>
+    <p>Written By <?php the_author_posts_link(); ?></p><br>
       <p><?php echo wp_trim_words(get_the_content(), 100); ?></p><br><p><a class="readmore" href="<?php echo the_permalink(); ?>">Read More</a></p></div>
       <br>
     </div>
