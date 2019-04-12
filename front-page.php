@@ -57,7 +57,7 @@
             </li>
             <li class="cards__item">
               <div class="card">
-                <div class="card-image card-image-panthers"></div>
+                <div class="card-image"></div>
                 <span class="sn-story">School News</span>
                 <div class="card__content">
                   <div class="card__title">Florida Panthers Alumni</div>
@@ -69,7 +69,7 @@
             </li>
             <li class="cards__item">
               <div class="card">
-                <div class="card-image card-image-wong"></div>
+                <div class="card-image"></div>
                 <span class="hw-story">Health & Wellness</span>
                 <div class="card__content">
                   <div class="card__title">Parasympathetic stimulation</div>
@@ -87,15 +87,17 @@
   <section id="top-story">
     <div class="container">
       <div class="row">
-        <div class="col-lg-6 col-md-8 col-xs-12 top-story-capsule">
+        <div class="col-lg-6 col-xs-12">
+          <ul>
           <?php 
         $coverStory = new WP_Query(array(
-          'posts_per_page' => 1,
+          'posts_per_page' => 2,
           'post_type' => 'featured',
           'orderby' => 'rand'
         ));
           while($coverStory->have_posts()){
             $coverStory->the_post(); ?>
+            <li>
               <legend>Story of the month</legend>
               <h1><?php the_title(); ?></h1>
               <h2>By Nicole Jenkins</h2>
@@ -105,6 +107,7 @@
           </li>
          <?php } wp_reset_postdata();
         ?>
+        </ul>
         </div>
       </div>
     </div>

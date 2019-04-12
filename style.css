@@ -50,13 +50,10 @@ a {
 .container {
   max-width: 1300px;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0 25px;
   position: relative;
 }
 
-.container--narrow {
-  max-width: 960px;
-}
 hr.related{
     overflow: visible; /* For IE */
     padding: 0;
@@ -329,11 +326,10 @@ span.btn:hover {
   height: 4px;
   display: inline-block;
 }
+
 #top-story {
-  background-image: url('./assets/veteran.jpg');
   background-size: cover;
   background-position: center;
-  /*background: #0B132B;*/
   margin: 70px 0;
   height: auto;
   width: 100%;
@@ -388,6 +384,11 @@ padding: 20px;
   text-transform: uppercase;
   width: 160px;
   text-align: center;
+}
+
+#top-story ul>li {
+display: inline-block;
+list-style: none;
 }
 #features {
   margin: 70px 0 70px 0;
