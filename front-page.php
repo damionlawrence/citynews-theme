@@ -25,6 +25,34 @@
       <div class="col-md-2 col-sm-2 col-xs-2 bars-6 divleft"></div>
     </div>
   </section>
+  <section id="top-story">
+    <div class="container">
+      <div class="row">      
+          <?php 
+        $coverStory = new WP_Query(array(
+          'posts_per_page' => 1,
+          'post_type' => 'featured',
+          'orderby' => 'rand'
+        ));
+          while($coverStory->have_posts()){
+            $coverStory->the_post(); ?>
+            <div class="col-lg-6 col-xs-12">
+              <legend>Story of the month</legend>
+              <h1><?php the_title(); ?></h1>
+              <h2>By Nicole Jenkins</h2>
+              <p><?php echo wp_trim_words(get_the_content(), 150); ?></p>
+              <br>
+          <a href="<?php echo the_permalink(); ?>"><span class="readmore">Read More</span></a>
+          </div>
+          <div class="col-lg-6 col-xs-12">
+          <img src="<?php $contentImage = get_field('content_image'); echo $contentImage['url'] ?>" alt="Photo by Damion Lawrence"/>
+          </div>
+         <?php } wp_reset_postdata();
+        ?>
+      </div>
+    </div>
+  </section>
+  <hr>
   <section id="features">
     <div class="container">
       <legend>Featured</legend>
@@ -84,35 +112,6 @@
       </div>
     </div>
   </section>
-  <section id="top-story">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 col-xs-12">
-          <ul>
-          <?php 
-        $coverStory = new WP_Query(array(
-          'posts_per_page' => 2,
-          'post_type' => 'featured',
-          'orderby' => 'rand'
-        ));
-          while($coverStory->have_posts()){
-            $coverStory->the_post(); ?>
-            <li>
-              <legend>Story of the month</legend>
-              <h1><?php the_title(); ?></h1>
-              <h2>By Nicole Jenkins</h2>
-              <p><?php echo wp_trim_words(get_the_content(), 150); ?></p>
-              <br>
-          <a href="<?php echo the_permalink(); ?>"><span class="readmore">Read More</span></a>
-          </li>
-         <?php } wp_reset_postdata();
-        ?>
-        </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section id="cn-news">
     <div class="container">
       <legend><a href="<?php echo site_url('/category/community'); ?>">Community News</a></legend>

@@ -345,16 +345,7 @@ p.letter::first-letter{
   float: left;
   line-height: .7em;
 }
-#top-story img{
-width: 60%;
-height: auto;
-padding: 20px;
-}
-@media screen and ( min-width: 300px)and (max-width: 768px){
-  #top-story img{
-    width: 100%;
-  }
-}
+
 #top-story h1{
   color: #0B132B;
   font-size: 3.5em;
@@ -386,10 +377,6 @@ padding: 20px;
   text-align: center;
 }
 
-#top-story ul>li {
-display: inline-block;
-list-style: none;
-}
 #features {
   margin: 70px 0 70px 0;
 }
