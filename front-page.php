@@ -52,7 +52,16 @@
       </div>
     </div>
   </section>
-  <hr>
+  <section id="bars" class="container">
+    <div class="row">
+      <div class="col-md-2 col-sm-2 col-xs-2 bars-1 divleft"></div>
+      <div class="col-md-2 col-sm-2 col-xs-2 bars-2 divleft"></div>
+      <div class="col-md-2 col-sm-2 col-xs-2 bars-3 divleft"></div>
+      <div class="col-md-2 col-sm-2 col-xs-2 bars-4 divleft"></div>
+      <div class="col-md-2 col-sm-2 col-xs-2 bars-5 divleft"></div>
+      <div class="col-md-2 col-sm-2 col-xs-2 bars-6 divleft"></div>
+    </div>
+  </section>
   <section id="features">
     <div class="container">
       <legend>Featured</legend>
@@ -130,7 +139,7 @@
                   $commnunityPosts->the_post(); ?>
                 <li class="cards__item">
               <div class="card">
-                <div class="card-image card-image-broward"></div>
+              <div class="card-image" style="background-image: url(<?php $featureImage = get_field('thumbnail_image'); echo $featureImage['url'] ?>);"></div>
                 <div class="card__content">
                   <div class="card__title"><?php the_title(); ?></div>
                   <p class="cardtext"><?php echo wp_trim_words(get_the_content(), 50); ?></p>
@@ -164,7 +173,7 @@
                   $businessPosts->the_post(); ?>
                 <li class="cards__item">
               <div class="card">
-                <div class="card-image card-image-broward"></div>
+              <div class="card-image" style="background-image: url(<?php $featureImage = get_field('thumbnail_image'); echo $featureImage['url'] ?>);"></div>
                 <div class="card__content">
                   <div class="card__title"><?php the_title(); ?></div>
                   <p class="cardtext"><?php echo wp_trim_words(get_the_content(), 50); ?></p>
@@ -199,7 +208,7 @@
                   $healthPosts->the_post(); ?>
                 <li class="cards__item">
               <div class="card">
-                <div class="card-image card-image-broward"></div>
+              <div class="card-image" style="background-image: url(<?php $featureImage = get_field('thumbnail_image'); echo $featureImage['url'] ?>);"></div>
                 <div class="card__content">
                   <div class="card__title"><?php the_title(); ?></div>
                   <p class="cardtext"><?php echo wp_trim_words(get_the_content(), 50); ?></p>

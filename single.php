@@ -15,6 +15,7 @@ while(have_posts()) {
 </div>
     
       <div class="contain">
+      <img src="<?php $contentImage = get_field('content_image'); echo $contentImage['url'] ?>" alt="Photo by Damion Lawrence" class="textwrap">
       <?php the_content(); ?>
       </div>  
     </div>
@@ -36,7 +37,7 @@ while(have_posts()) {
                   $relatedPosts->the_post(); ?>
                 <li class="cards__item">
               <div class="card">
-                <div class="card-image card-image-broward"></div>
+              <div class="card-image" style="background-image: url(<?php $featureImage = get_field('thumbnail_image'); echo $featureImage['url'] ?>);"></div>
                 <div class="card__content">
                   <div class="card__title"><?php the_title(); ?></div>
                   <p class="cardtext"><?php echo wp_trim_words(get_the_content(), 30); ?></p>
