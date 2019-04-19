@@ -25,6 +25,12 @@ body, html {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
+a {
+  color: #fff;
+}
+a:hover {
+  color: #ffd046;
+}
 p {
   color: #252525;
   font-family: 'Open Sans', sans-serif;
@@ -85,10 +91,7 @@ legend > a {
   legend > a:hover {
     color: #eee;
     }
-.marginrow{
-    margin: 0px !important;
-    padding: 0;
-  }
+
 .divcenter{
     margin: 0 auto !important;
     text-align: center !important;
@@ -102,8 +105,9 @@ legend > a {
     display: block;
   }
   .border-class{
-    border: 1px solid #ccc;
-    padding: 20px;
+
+    padding: 10px;
+    text-align: center;
   }
   .textwrap {
     float: right;
@@ -488,15 +492,16 @@ color: #fff;
 #subscribe-now {
   background: #c3bad9;
   margin-top: 100px;
-  padding: 50px;
+  padding: 30px;
 }
 #subscribe-now h1{
   color:#fff;
-  padding-bottom: 30px;
 }
 #subscribe-now p{
   padding: 30px 0;
   font-size: 1.2em;
+  width: 50%;
+  margin: 0 auto;
   /*border-top: 1px dashed #ccc;*/
 }
 @media screen and (max-width: 450px) {
@@ -910,6 +915,10 @@ color: #fff;
   border-bottom: 1px dotted #DEDEDE;
   padding-bottom: 1.7rem;
   margin-bottom: 1.7rem;
+}
+
+.post-item a {
+  color: #071830d2;
 }
 
 .post-item:last-of-type {

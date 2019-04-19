@@ -3,17 +3,29 @@
 <section id="current-issue">
     <div class="container">
       <div class="row">
+        <?php
+        $sliderPost = new WP_query(array(
+          'posts_per_page' => 1,
+          'post_type' => 'featured',
+          'orderby' => 'rand'
+        ));
+        while($sliderPost->have_posts()) {
+          $sliderPost->the_post(); ?>
         <div class="col-md-6 col-sm-6 col-xs-12">
-          <img src="<?php echo get_theme_file_uri('/assets/prodent_mag01.png'); ?>" alt="Current Issue" class="magazine">
+          <img src="<?php $slideImage = get_field('cover_slide'); echo $slideImage['url'] ?>" alt="Current Issue" class="magazine">
         </div>
         <div class="col-md-6 col-sm-6 col-xs-12 mag-left">
-          <h1>Prodent Group</h1>
-          <p>12 pledges: as a leading oral health charity, we make our promises for the year ahead.</p>
-          <a href="#"><span class="readonline">Read Now</span></a>
+          <h1><?php echo get_field('slider_headline'); ?></h1>
+          <p><?php echo get_field('page_banner_description'); ?></p>
+          <a href="<?php echo the_permalink(); ?>"><span class="readonline">Read Now</span></a>
           <a href="#subscribe-now"><span class="readnow">Subscribe</span></a>
         </div>
+      
+     <?php } wp_reset_postdata();
+     ?>
       </div>
     </div>
+
   </section>
   <section id="bars">
     <div class="row">
@@ -62,65 +74,42 @@
       <div class="col-md-2 col-sm-2 col-xs-2 bars-6 divleft"></div>
     </div>
   </section>
+
   <section id="features">
     <div class="container">
-      <legend>Featured</legend>
+    <legend><a href="<?php echo site_url('/category/school'); ?>">School News</a></legend>
       <div class="row">
-        <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="col-md-12 col-sm-12">
           <ul class="cards">
-            <li class="cards__item">
+          <?php 
+          $schoolPosts = new WP_Query(array(
+            'posts_per_page' => 4,
+            'category_name' => 'school',
+            'orderby' => 'rand',
+            'order' => 'ASC'
+
+          ));
+                while($schoolPosts->have_posts()) {
+                  $schoolPosts->the_post(); ?>
+                <li class="cards__item">
               <div class="card">
-                <div class="card-image card-image-veteran"></div>
-                <span class="feat-story">features</span>
+              <div class="card-image" style="background-image: url(<?php $featureImage = get_field('thumbnail_image'); echo $featureImage['url'] ?>);"></div>
                 <div class="card__content">
-                  <div class="card__title">Veterans Coalition</div>
-                  <p class="cardtext">Those who risk their lives to fight for our country have an unspoken bond. During Veterans Day and all year round, the Veterans Coalition of Coral Springs provides support to local veterans and their families. They want to make sure
-                    veterans feel a sense of belonging to their local community when they return home.</p>
-                  <a href="veterans.html"><span class="readmore">Read More</span></a>
+                  <div class="card__title"><?php the_title(); ?></div>
+                  <p class="cardtext"><?php echo wp_trim_words(get_the_content(), 50); ?></p>
+                  <a href="<?php echo the_permalink() ?>"><span class="readmore">Read More</span></a>
                 </div>
               </div>
             </li>
-            <li class="cards__item">
-              <div class="card">
-                <div class="card-image card-image-lopez"></div>
-                <span class="cn-story">Community News</span>
-                <div class="card__content">
-                  <div class="card__title">Yvonne Lopez</div>
-                  <p class="card__text">Since 2005, Yvonne Lopez has been at the forefront of promoting the City of Coconut Creek. As Community Relations Director, Yvonne Lopez is a champion for the community and is in charge of keeping residents and businesses informed about
-                    projects, initiatives, and events happening in the City of Coconut Creek. </p>
-                  <a href="yvonnelopez.html"><span class="readmore">Read More</span></a>
-                </div>
-              </div>
-            </li>
-            <li class="cards__item">
-              <div class="card">
-                <div class="card-image"></div>
-                <span class="sn-story">School News</span>
-                <div class="card__content">
-                  <div class="card__title">Florida Panthers Alumni</div>
-                  <p class="card__text">The Florida Panthers partnered with Coral Springs Community Chest for the second annual Pucks for Bucks charity hockey game benefiting the Coral Springs Community Chest.Florida Panthers alumni Tomas Fleischmann, Tomas Vokoun, Peter Worrell,
-                    Bill Lindsay, Shawn Thornton and more laced up their skates for the alumni squad.</p>
-                  <a href="panthers.html"><span class="readmore">Read More</span></a>
-                </div>
-              </div>
-            </li>
-            <li class="cards__item">
-              <div class="card">
-                <div class="card-image"></div>
-                <span class="hw-story">Health & Wellness</span>
-                <div class="card__content">
-                  <div class="card__title">Parasympathetic stimulation</div>
-                  <p class="card__text">Mind and body are linked as part of an integral system that affect our general well being. The mind exert its influence on our body with a elaborate network of endocrine system consists of sympathetic and parasympathetic hormones. Sympathetic
-                    is the fight and freight hormone we are family with. </p>
-                  <a href="wong.html"><span class="readmore">Read More</span></a>
-                </div>
-              </div>
-            </li>
+
+                <?php  } wp_reset_postdata();
+                ?>
           </ul>
         </div>
       </div>
     </div>
   </section>
+
   <section id="cn-news">
     <div class="container">
       <legend><a href="<?php echo site_url('/category/community'); ?>">Community News</a></legend>

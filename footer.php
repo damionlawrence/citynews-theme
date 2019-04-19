@@ -1,12 +1,9 @@
 <section id="subscribe-now" class="home-newsletter">
     <div class="container">
       <div class="row border-class">
-        <div class="col-md-6 col-sm-6 col-xs-12">
-          <img src="<?php echo get_theme_file_uri('/assets/web.png'); ?>" alt="">
-        </div>
-        <div class="col-md-6 col-sm-6 col-xs-12">
-          <h1>Get Every Issue. <br> Every month.</h1>
-          <p>School News • Community News • Legally Speaking • Health & Wellness • Dining Out • It's Their Business • Real Estate News • Chamber News • Teen Time • Religion</p>
+        <div class="col-xs-12">
+          <h1>Get Every Issue. Every Month.</h1>
+          <p>School News • Community News • Legally Speaking • Health & Wellness • Dining Out • It's Their Business • Real Estate News <br>• Chamber News • Teen Time • Religion</p>
           <div class="input-group single">
             <input type="email" class="form-control" placeholder="Enter your email">
             <span class="input-group-btn">
