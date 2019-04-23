@@ -9,37 +9,47 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, right-sidebar, flexible-width, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
 Text Domain: damionlawrence.com
 */
+
+
+$color-white: #eee;
+$color-gold: #ffd046;
+$color-dark: #252525;
+$color-red: #d91f26;
+$color-blue: #0B132B;
+
+
+
 *,
 *::after,
 *::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body,
 html {
-  color: #eee;
-  font-size: 62%;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
+    color: $color-white;
+    font-size: 62%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
 }
 
 a {
-  color: #eee;
-  text-decoration: none;
-}
+    color: $color-white;
+    text-decoration: none;
 
-a:hover {
-  color: #ffd046;
+    &:hover {
+        color: $color-gold;
+    }
 }
 
 legend {
-  background-color: #d91f26;
-}
+    background-color: $color-red;
 
-legend a {
-  color: #eee;
+    & a {
+        color: $color-white;
+    }
 }
