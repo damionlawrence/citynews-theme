@@ -1,0 +1,49 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    color: $color-white;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+a:link,
+a:visited {
+    color: $color-white;
+    text-decoration: none;
+
+    &:hover {
+        color: $color-gold;
+    }
+}
+
+legend {
+    background-color: $color-red;
+
+    & a {
+        color: $color-white;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 130rem;
+    margin: 0 auto;
+    padding: 0 2.5rem;
+    position: relative;
+}

@@ -14,32 +14,248 @@ Text Domain: damionlawrence.com
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 body,
 html {
   color: #eee;
-  font-size: 62%;
+  font-size: 100%;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-}
+  -webkit-font-smoothing: antialiased; }
 
-a {
+a:link,
+a:visited {
   color: #eee;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #ffd046;
-}
+  text-decoration: none; }
+  a:link:hover,
+  a:visited:hover {
+    color: #ffd046; }
 
 legend {
-  background-color: #d91f26;
-}
+  background-color: #d91f26; }
+  legend a {
+    color: #eee; }
 
-legend a {
+img {
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0; }
+
+.container {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+  position: relative; }
+
+p {
+  color: #252525;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 300; }
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 5rem;
+  font-weight: 700;
+  color: #eee; }
+
+p.letter::first-letter {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 4em;
+  font-weight: 700;
+  margin: 8px;
+  float: left;
+  line-height: .7em; }
+
+.divcenter {
+  margin: 0 auto !important;
+  text-align: center !important; }
+
+.textwrap {
+  float: right;
+  margin: 2rem; }
+
+.intl-dance {
+  margin-bottom: 70px; }
+
+span.readonline {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1rem;
+  background-color: #d91f26;
   color: #eee;
-}
+  border-radius: 0;
+  padding: 10px;
+  text-align: right;
+  margin-top: 2rem;
+  letter-spacing: 2px;
+  text-decoration: none;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  -webkit-transform: skew(-14deg, 0deg);
+  -moz-transform: skew(-14deg, 0deg);
+  -ms-transform: skew(-14deg, 0deg);
+  -o-transform: skew(-14deg, 0deg);
+  transform: skew(-14deg, 0deg); }
+  span.readonline:hover {
+    color: #252525;
+    background-color: #ffd046;
+    text-decoration: none;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s; }
+
+/* NAVIGATION */
+.navbar-fixed-bottom,
+.navbar-fixed-top {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030; }
+
+.nav > li > a {
+  padding-top: 30px;
+  padding-bottom: 40px; }
+
+.navbar-inverse {
+  margin-bottom: 0 !important;
+  border: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+  color: #252525;
+  background: #ffd046;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s; }
+
+.navbar {
+  background: #0B132B;
+  font-family: 'Open Sans Condensed', sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+  padding: 0;
+  margin-bottom: 0 !important;
+  height: auto;
+  border: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+.navbar-brand img {
+  height: auto;
+  width: auto;
+  max-height: 62px;
+  max-width: 200px; }
+
+.navbar-toggle {
+  margin-top: 40px; }
+
+.navbar-inverse .navbar-toggle {
+  border-color: transparent;
+  float: right; }
+
+.navbar-inverse .navbar-toggle .icon-bar {
+  background: #eee; }
+
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+  background: #0496FF; }
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    height: 90px; }
+  .navbar-toggle {
+    margin-top: 30px; } }
+
+@media screen and (max-width: 768px) {
+  .nav > li > a {
+    padding: 5px; } }
+
+#current-issue {
+  background-image: url("./assets/blur.jpg");
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 7rem 0;
+  height: auto;
+  width: 100%; }
+  #current-issue h1 {
+    text-transform: uppercase;
+    font-size: 5rem;
+    padding-top: 3rem; }
+  #current-issue p {
+    color: #eee;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+    margin-bottom: 4rem; }
+
+@media screen and (max-width: 768px) {
+  #current-issue h1 {
+    font-size: 4rem; } }
+
+#footer {
+  background-color: #0B132B;
+  height: auto;
+  padding: 7rem 0; }
+  #footer img {
+    margin-bottom: 2rem; }
+  #footer p {
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-transform: uppercase;
+    font-size: 1rem;
+    text-decoration: none;
+    list-style: none;
+    color: #eee; }
+  #footer i {
+    color: #eee;
+    font-size: 2.4rem;
+    padding: 30px 30px 30px 0;
+    display: inline-block; }
+
+@media screen and (min-width: 468px) {
+  #footer img {
+    width: 250px; } }
+
+#footer ul li {
+  font-family: 'Open Sans Condensed', sans-serif;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: 300;
+  text-decoration: none;
+  list-style: none;
+  color: #f7f7ff;
+  padding-bottom: 10px;
+  padding-left: 10px; }
+
+#footer ul li:hover {
+  color: #ffd046; }
+
+#top-story {
+  font-family: 'Open Sans Condensed', sans-serif;
+  margin: 70px 0;
+  height: auto;
+  width: 100%; }
+  #top-story h1 {
+    color: #252525;
+    font-size: 3.5rem;
+    text-transform: capitalize; }
+  #top-story h2 {
+    color: #252525;
+    font-size: 1rem;
+    text-transform: uppercase; }
+  #top-story legend {
+    font-size: 1.5rem;
+    color: #eee;
+    text-transform: uppercase;
+    width: 16rem;
+    text-align: center; }
+
+@media screen and (max-width: 50rem) {
+  #top-story h1 {
+    font-size: 2.2em; } }

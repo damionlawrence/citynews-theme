@@ -1,0 +1,30 @@
+span.readonline {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1rem;
+    background-color: $color-red;
+    color: $color-white;
+    border-radius: 0;
+    padding: 10px;
+    text-align: right;
+    margin-top: 2rem;
+    letter-spacing: 2px;
+    text-decoration: none;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    -webkit-transform: skew(-14deg, 0deg);
+    -moz-transform: skew(-14deg, 0deg);
+    -ms-transform: skew(-14deg, 0deg);
+    -o-transform: skew(-14deg, 0deg);
+    transform: skew(-14deg, 0deg);
+
+    &:hover {
+        color: $color-dark;
+        background-color: $color-gold;
+        text-decoration: none;
+        -webkit-transition-duration: 0.4s;
+        /* Safari */
+        transition-duration: 0.4s;
+    }
+}

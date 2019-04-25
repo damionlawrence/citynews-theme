@@ -11,45 +11,20 @@ Text Domain: damionlawrence.com
 */
 
 
-$color-white: #eee;
-$color-gold: #ffd046;
-$color-dark: #252525;
-$color-red: #d91f26;
-$color-blue: #0B132B;
+@import "abstracts/variables";
 
+// base
+@import "base/base";
+@import "base/typography";
 
+// components
+@import "components/utilities";
+@import "components/button";
+@import "components/navbar";
 
-*,
-*::after,
-*::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+// layouts
+@import "layouts/header";
+@import "layouts/footer";
 
-body,
-html {
-    color: $color-white;
-    font-size: 62%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    -webkit-font-smoothing: antialiased;
-}
-
-a {
-    color: $color-white;
-    text-decoration: none;
-
-    &:hover {
-        color: $color-gold;
-    }
-}
-
-legend {
-    background-color: $color-red;
-
-    & a {
-        color: $color-white;
-    }
-}
+//pages
+@import "pages/home";

@@ -1,0 +1,23 @@
+p {
+    color: $color-dark;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    font-weight: 700;
+    color: $color-white;
+}
+
+p.letter::first-letter {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 4em;
+    font-weight: 700;
+    margin: 8px;
+    float: left;
+    line-height: .7em;
+}
