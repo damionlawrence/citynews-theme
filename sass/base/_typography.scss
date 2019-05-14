@@ -15,7 +15,7 @@ h1 {
 
 p.letter::first-letter {
     font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 4em;
+    font-size: 4rem;
     font-weight: 700;
     margin: 8px;
     float: left;
@@ -24,7 +24,7 @@ p.letter::first-letter {
 
 .h1-article {
     color: $color-blue;
-    font-size: 3em;
+    font-size: 3rem;
     text-transform: capitalize;
     text-align: center;
 
@@ -36,9 +36,9 @@ p.letter::first-letter {
         font-weight: 300;
         font-size: .85em;
         text-transform: uppercase;
-        margin: 50px auto;
+        margin: 5rem auto;
         border-bottom: 5px solid $color-blue;
-        padding-bottom: 20px;
+        padding-bottom: 2rem;
         display: table;
     }
 }
